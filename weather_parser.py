@@ -8,7 +8,8 @@ def weather_parser(city):
     }
 
     if city not in urls:
-        return f'Город {city} не поддерживается.'
+        print(f'Город {city} не поддерживается.')
+        return
 
     url = urls[city]
     class_ = 'ArchiveTemp'
@@ -25,3 +26,4 @@ def weather_parser(city):
 # Примеры вызова функции
 weather_parser('Санкт-Петербург')
 weather_parser('Буэнос-Айрес')
+weather_parser('Москва')
